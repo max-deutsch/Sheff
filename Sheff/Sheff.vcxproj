@@ -11,12 +11,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Sheff\Log.h" />
     <ClInclude Include="src\Sheff.h" />
     <ClInclude Include="src\Sheff\Application.h" />
     <ClInclude Include="src\Sheff\Core.h" />
     <ClInclude Include="src\Sheff\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Sheff\Log.cpp" />
     <ClCompile Include="src\Sheff\Application.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -66,8 +68,9 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>SF_PLATFORM_WINDOWS;SF_BUILD_DLL</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SH_PLATFORM_WINDOWS;SH_BUILD_DLL</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Sheff\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -80,8 +83,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>SF_PLATFORM_WINDOWS;SF_BUILD_DLL</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SH_PLATFORM_WINDOWS;SH_BUILD_DLL</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Sheff\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
