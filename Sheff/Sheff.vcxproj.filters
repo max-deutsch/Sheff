@@ -4,6 +4,9 @@
     <Filter Include="Sheff">
       <UniqueIdentifier>{91B4170E-FDC8-3FBF-C64A-E31E321E3CF0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sheff\Events">
+      <UniqueIdentifier>{5573A454-41D6-33F9-EA5B-6CAFD69DFF7B}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Sheff.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Sheff\EntryPoint.h">
       <Filter>Sheff</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sheff\Events\ApplicationEvent.h">
+      <Filter>Sheff\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sheff\Events\Event.h">
+      <Filter>Sheff\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sheff\Events\KeyEvent.h">
+      <Filter>Sheff\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sheff\Events\MouseEvent.h">
+      <Filter>Sheff\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Sheff\Log.h">
       <Filter>Sheff</Filter>

@@ -1,5 +1,8 @@
 #include "Application.h"
 
+#include "Sheff/Events/ApplicationEvent.h"
+#include "Sheff/Log.h"
+
 namespace Sheff {
 	Application::Application()
 	{
@@ -11,6 +14,9 @@ namespace Sheff {
 	}
 	void Application::Run()
 	{
+		WindowResizeEvent e(1280, 720);
+		SH_TRACE(e);
+
 		while (true);
 	}
 }
