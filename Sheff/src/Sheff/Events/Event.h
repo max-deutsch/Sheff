@@ -2,9 +2,6 @@
 
 #include "Sheff/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Sheff {
 
 	// Events are currently blocking

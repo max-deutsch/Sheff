@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Sheff {
 	class SHEFF_API KeyEvent : public Event
 	{
