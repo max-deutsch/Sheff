@@ -105,7 +105,7 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "off"
+		staticruntime "on"
 		systemversion "latest"
 
 		defines
@@ -115,15 +115,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "SH_DEBUG"
-		buildoptions "/MDd"
+		-- buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "SH_RELEASE"
-		buildoptions "/MD"
+		-- buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "SH_DIST"
-		buildoptions "/MD"
+		-- buildoptions "/MD"
 		optimize "On"
