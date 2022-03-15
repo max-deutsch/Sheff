@@ -28,6 +28,7 @@ namespace Sheff {
 
 	class SHEFF_API MouseScrolledEvent : public Event
 	{
+	public:
 		MouseScrolledEvent(float xOffset, float yOffset)
 			: m_XOffset(xOffset), m_YOffset(yOffset) {}
 
