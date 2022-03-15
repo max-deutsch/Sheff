@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Sheff/Log.h"
+
 #ifdef SH_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif

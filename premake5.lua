@@ -10,6 +10,13 @@ workspace "Sheff"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to the root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Sheff/vendor/GLFW/include"
+
+-- includes the premake file in the submodule
+include "Sheff/vendor/GLFW"
+
 project "Sheff"
 	location "Sheff"
 	kind "SharedLib"
@@ -30,12 +37,19 @@ project "Sheff"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW", -- the premake project from including the GLFW premake file
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+		staticruntime "off" -- sets RUntime Library to MultiThreadedDLL
 		systemversion "latest"
 
 		defines
@@ -51,14 +65,17 @@ project "Sheff"
 
 	filter "configurations:Debug"
 		defines "SH_DEBUG"
+		buildoptions "/MDd" -- TODO what does this mean?
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "SH_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "SH_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -88,7 +105,7 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+		staticruntime "off"
 		systemversion "latest"
 
 		defines
@@ -98,12 +115,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "SH_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "SH_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "SH_DIST"
+		buildoptions "/MD"
 		optimize "On"

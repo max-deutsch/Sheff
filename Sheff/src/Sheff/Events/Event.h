@@ -1,6 +1,8 @@
 #pragma once
 
+#include "shpch.h"
 #include "Sheff/Core.h"
+
 
 namespace Sheff {
 
