@@ -49,7 +49,7 @@ project "Sheff"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "off" -- sets RUntime Library to MultiThreadedDLL
+		staticruntime "off" -- off sets RUntime Library to MultiThreadedDLL. on sets it to TODO
 		systemversion "latest"
 
 		defines
@@ -65,7 +65,8 @@ project "Sheff"
 
 	filter "configurations:Debug"
 		defines "SH_DEBUG"
-		buildoptions "/MDd" -- TODO what does this mean?
+		-- if you are building a DLL linking against the dll version of the runtime lib
+		buildoptions "/MDd" -- TODO what does this mean? missing /MDd bzw /MD was a problem because we are statically linking to the c++ library and therefore ended up with different heaps
 		symbols "On"
 
 	filter "configurations:Release"
@@ -105,7 +106,7 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "on"
+		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -113,17 +114,19 @@ project "Sandbox"
 			"SH_PLATFORM_WINDOWS"
 		}
 
+
+	-- /MDd and /MD need to be specified otherwise the app crashes do to some heap error
 	filter "configurations:Debug"
 		defines "SH_DEBUG"
-		-- buildoptions "/MDd"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "SH_RELEASE"
-		-- buildoptions "/MD"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "SH_DIST"
-		-- buildoptions "/MD"
+		buildoptions "/MD"
 		optimize "On"

@@ -161,6 +161,8 @@
     <ClInclude Include="src\Sheff\Events\Event.h" />
     <ClInclude Include="src\Sheff\Events\KeyEvent.h" />
     <ClInclude Include="src\Sheff\Events\MouseEvent.h" />
+    <ClInclude Include="src\Sheff\Layer.h" />
+    <ClInclude Include="src\Sheff\LayerStack.h" />
     <ClInclude Include="src\Sheff\Log.h" />
     <ClInclude Include="src\Sheff\Window.h" />
     <ClInclude Include="src\shpch.h" />
@@ -168,6 +170,8 @@
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Sheff\Application.cpp" />
+    <ClCompile Include="src\Sheff\Layer.cpp" />
+    <ClCompile Include="src\Sheff\LayerStack.cpp" />
     <ClCompile Include="src\Sheff\Log.cpp" />
     <ClCompile Include="src\shpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

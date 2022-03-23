@@ -40,6 +40,12 @@
     <ClInclude Include="src\Sheff\Events\MouseEvent.h">
       <Filter>Sheff\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Sheff\Layer.h">
+      <Filter>Sheff</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sheff\LayerStack.h">
+      <Filter>Sheff</Filter>
+    </ClInclude>
     <ClInclude Include="src\Sheff\Log.h">
       <Filter>Sheff</Filter>
     </ClInclude>
@@ -53,6 +59,12 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Sheff\Application.cpp">
+      <Filter>Sheff</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sheff\Layer.cpp">
+      <Filter>Sheff</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sheff\LayerStack.cpp">
       <Filter>Sheff</Filter>
     </ClCompile>
     <ClCompile Include="src\Sheff\Log.cpp">
