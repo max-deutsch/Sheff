@@ -4,7 +4,7 @@
 
 #include "Sheff/Log.h"
 
-#include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 namespace Sheff {
 
@@ -16,7 +16,6 @@ namespace Sheff {
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		// TODO verify: unique ptr seems to do the deletion automatically when application shuts down
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent)); 
-		// TODO 
 	}
 	Application::~Application()
 	{

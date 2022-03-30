@@ -13,9 +13,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to the root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Sheff/vendor/GLFW/include"
+IncludeDir["Glad"] = "Sheff/vendor/Glad/include"
 
 -- includes the premake file in the submodule
 include "Sheff/vendor/GLFW"
+include "Sheff/vendor/Glad"
 
 project "Sheff"
 	location "Sheff"
@@ -38,12 +40,14 @@ project "Sheff"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW", -- the premake project from including the GLFW premake file
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -55,7 +59,8 @@ project "Sheff"
 		defines
 		{
 			"SH_PLATFORM_WINDOWS",
-			"SH_BUILD_DLL"
+			"SH_BUILD_DLL",
+			"GLFW_INCLUDE_NONE" -- will prevent including OpenGL headers so that it is not included multiple times with glad.h. This enables including GLFW before Glad
 		}
 
 		postbuildcommands
