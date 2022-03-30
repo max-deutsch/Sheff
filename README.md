@@ -24,4 +24,4 @@ An Example implementation can be found with the Sandbox Project. A subclass of S
 * Modern OpenGL (Glad)
     * OpenGL 4.6 has been integrated
 * ImGui
-    * An ImGuiLayer is provides which tests the ImGui integration by drawing a demo window with the application window.
+    * An ImGuiLayer is provides which tests the ImGui integration by drawing a demo window with the application window. Window events are NOT yet passed to ImGui.
