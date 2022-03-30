@@ -3,6 +3,9 @@ bin/
 bin-int/
 
 *.user
+*.sln
+*.vcxproj
+*.vcxproj.filters
 
-
+# include vendor binaries (premake)
 !vendor/*
