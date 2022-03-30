@@ -11,6 +11,10 @@
 
 namespace Sheff {
 
+	/*
+	* Base Class for a client application.
+	* On creation handles setting up a window
+	*/
 	class SHEFF_API Application
 	{
 	public:

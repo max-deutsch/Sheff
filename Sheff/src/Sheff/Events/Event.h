@@ -29,7 +29,10 @@ namespace Sheff {
 	};
 
 
-	// TODO what does # and ## mean?
+	// This defines the standard implementations of the three given methods
+	// This is handy because the same code does not have to be written multiple times.
+	// The # is the stringify operator.
+	// The ## is the concatinating operator.	
 	// static function to retrieve the EventType is needed to call with a template type T (e.g. in EventDispatcher)
 	// regular function to retrieve the EventType is needed to call with an Event instance.
 #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() {return EventType::##type; } \
@@ -56,6 +59,9 @@ namespace Sheff {
 		}
 	};
 
+	// This is a utility class to easily just subscribe to the desired Event Types.
+	// The Dispatch function only handles the Events of the desired types.
+	// This prevents the called from needing to implement the if condition.
 	class EventDispatcher
 	{
 		template<typename T>

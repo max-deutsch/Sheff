@@ -25,7 +25,7 @@ namespace Sheff {
 	class SHEFF_API Window
 	{
 	public:
-		// what does "using" mean
+		// TODO what does "using" mean
 		using EventCallbackFn = std::function<void(Event&)>;
 
 		virtual ~Window() {}
