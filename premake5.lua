@@ -1,5 +1,6 @@
 workspace "Sheff"
 	architecture "x64"
+	startproject "Sandbox"
 
 	configurations
 	{
@@ -65,6 +66,7 @@ project "Sheff"
 
 		postbuildcommands
 		{
+			("{MKDIR} ../bin/" .. outputdir .. "/Sandbox"),
 			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
 		}
 

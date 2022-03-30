@@ -1,0 +1,2 @@
+call PullSubmodules.bat
+call GenerateProjects.bat
