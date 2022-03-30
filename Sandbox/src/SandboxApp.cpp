@@ -10,7 +10,7 @@ public:
 
 	void OnUpdate() override // TODO what if override is not specified?
 	{
-		SH_INFO("ExampleLAyer::Update");
+		// SH_INFO("ExampleLAyer::Update");
 	}
 
 	void OnEvent(Sheff::Event& event) override
