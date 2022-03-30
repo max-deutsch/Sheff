@@ -4,3 +4,6 @@
 [submodule "Sheff/vendor/GLFW"]
 	path = Sheff/vendor/GLFW
 	url = https://github.com/max-deutsch/glfw
+[submodule "Sheff/vendor/imgui"]
+	path = Sheff/vendor/imgui
+	url = https://github.com/max-deutsch/imgui.git

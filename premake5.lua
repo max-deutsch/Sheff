@@ -15,10 +15,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Sheff/vendor/GLFW/include"
 IncludeDir["Glad"] = "Sheff/vendor/Glad/include"
+IncludeDir["ImGui"] = "Sheff/vendor/imgui"
 
 -- includes the premake file in the submodule
 include "Sheff/vendor/GLFW"
 include "Sheff/vendor/Glad"
+include "Sheff/vendor/imgui"
 
 project "Sheff"
 	location "Sheff"
@@ -42,13 +44,15 @@ project "Sheff"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
-	links
+	links -- TODO what does linking mean? in VS Code its referencing. But what does it actually mean?
 	{
 		"GLFW", -- the premake project from including the GLFW premake file
 		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
