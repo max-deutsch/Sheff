@@ -11,3 +11,7 @@ Initialize pulls the submodules and generates the VS2019 Projects including a Sa
 
 ## What has been implemented beyond the mandatory Cherno Videos?
 
+### TheCherno videos
+* Layers
+* Modern OpenGL (Glad)
+* ImGui
